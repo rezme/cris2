@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html;
+	charset=utf-8">
+	<meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes;" />
+	<link rel="stylesheet" href="jquery.mobile-1.3.1.css" />
+	<script type="text/javascript" charset="utf-8" src="jquery-1.6.4.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery.mobile-1.3.1.js"></script>
+	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		function onBodyLoad() {
+			document.addEventListener("deviceready", onDeviceReady,false);
+			}
+		
+		function onDeviceReady() {
+			var element = document.getElementById('appInfo');
+			element.innerHTML = 'PhoneGap (version ' +
+			device.phonegap + ')<br />' + device.platform + ' ' +
+			device.name + ' (version ' + device.version + ').';
+		}
+	</script>
+	
+	
+</head>
+<body onload="onBodyLoad()">
+
+	<div data-role="page">
+		<div data-role="header" data-position="fixed">
+			<h1>JQUERY Mobile</h1>
+		</div>
+		<center>
+<a href="page-transitions-dialog.html" style="margin-top: 15px;" data-role="button" data-rel="dialog" data-transition="fade" data-inline="true">dialog</a>
+<form>
+    <label for="slider-1">Slider:</label>
+    <input type="range" name="slider-1" id="slider-1" min="0" max="100" value="50">
+</form>
+       </center>
+   		<div data-role="footer" data-position="fixed">
+			<h1>PhoneGap</h1>
+		</div>
+        <footer style="margin-top: 200px;">
+        <div data-role="footer" class="nav-glyphish-example">
+    <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+    <ul>
+        <li><a href="#" id="chat" data-icon="custom">Chat</a></li>
+        <li><a href="#" id="email" data-icon="custom">Email</a></li>
+        <li><a href="#" id="skull" data-icon="custom">Danger</a></li>
+        <li><a href="#" id="beer" data-icon="custom">Beer</a></li>
+        <li><a href="#" id="coffee" data-icon="custom">Coffee</a></li>
+    </ul>
+    </div>
+</div>
+        </footer>
+	</div>
+	
+</body>
+</html>
